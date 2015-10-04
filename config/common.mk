@@ -1,12 +1,12 @@
 PRODUCT_BRAND ?= cyanogenmod
 
  WITH_DEXPREOPT := false
-+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
-+#USE_CLANG_QCOM := true
-+#CLANG_QCOM_COMPILE_BIONIC := true
-+#USE_CLANG_QCOM_VERBOSE := true
-+#CLANG_QCOM_COMPILE_MIXED := true
-+STRICT_ALIASING := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+#USE_CLANG_QCOM := true
+#CLANG_QCOM_COMPILE_BIONIC := true
+#USE_CLANG_QCOM_VERBOSE := true
+#CLANG_QCOM_COMPILE_MIXED := true
+#STRICT_ALIASING := true
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
@@ -38,7 +38,6 @@ ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
 PRODUCT_BOOTANIMATION := vendor/cm/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip
 else
 PRODUCT_BOOTANIMATION := vendor/cm/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
-endif
 endif
 
 ifdef CM_NIGHTLY
