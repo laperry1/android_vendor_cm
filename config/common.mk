@@ -1,5 +1,13 @@
 PRODUCT_BRAND ?= cyanogenmod
 
+ WITH_DEXPREOPT := false
++TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
++#USE_CLANG_QCOM := true
++#CLANG_QCOM_COMPILE_BIONIC := true
++#USE_CLANG_QCOM_VERBOSE := true
++#CLANG_QCOM_COMPILE_MIXED := true
++STRICT_ALIASING := true
+
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
 TARGET_BOOTANIMATION_SIZE := $(shell \
@@ -8,7 +16,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   else \
     echo $(TARGET_SCREEN_HEIGHT); \
   fi )
-
+endif
 # get a sorted list of the sizes
 bootanimation_sizes := $(subst .zip,, $(shell ls vendor/cm/prebuilt/common/bootanimation))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
