@@ -149,11 +149,14 @@ PRODUCT_PACKAGES += \
     libemoji \
     Terminal
 
+# AudioFX
+PRODUCT_PACKAGES += \
+    Viper4Android
+
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
-    AudioFX \
     CMWallpapers \
     CMFileManager \
     Eleven \
@@ -251,6 +254,8 @@ ifndef CM_BUILDTYPE
     endif
 endif
 
+CM_BUILDTYPE := samadhimod
+
 # Filter out random types, so it'll reset to UNOFFICIAL
 ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
     CM_BUILDTYPE :=
@@ -301,8 +306,10 @@ ifeq ($(CM_BUILDTYPE), RELEASE)
     endif
 else
     ifeq ($(PRODUCT_VERSION_MINOR),0)
+	CM_BUILDTYPE := samadhimod
         CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
     else
+	CM_BUILDTYPE := samadhimod
         CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
     endif
 endif
