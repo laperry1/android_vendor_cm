@@ -133,6 +133,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
+# Let there be PIE (via LMT)
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/app/LMT_v2.5_beta4.apk:system/priv-app/lmt/LMT_v2.5_beta4.apk \
+    vendor/cm/prebuilt/common/etc/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so
+
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
 
@@ -254,7 +259,7 @@ ifndef CM_BUILDTYPE
     endif
 endif
 
-CM_BUILDTYPE := samadhimod
+CM_BUILDTYPE := SAMADHIMOD
 
 # Filter out random types, so it'll reset to UNOFFICIAL
 ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
