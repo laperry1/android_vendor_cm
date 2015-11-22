@@ -138,6 +138,11 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/app/LMT_v2.5_beta4.apk:system/priv-app/lmt/LMT_v2.5_beta4.apk \
     vendor/cm/prebuilt/common/etc/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so
 
+# Let there be KII
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/app/kii.apk:system/priv-app/KII/kii.apk \
+    vendor/cm/prebuilt/common/etc/app/libjni_zl_jbkex_armv7a.so:system/lib/libjni_zl_jbkex_armv7a.so
+
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
 
