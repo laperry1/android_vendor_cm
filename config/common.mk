@@ -1,6 +1,6 @@
 PRODUCT_BRAND ?= cyanogenmod
 
- WITH_DEXPREOPT := false
+WITH_DEXPREOPT := false
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 #USE_CLANG_QCOM := true
 #CLANG_QCOM_COMPILE_BIONIC := true
@@ -136,12 +136,9 @@ PRODUCT_COPY_FILES += \
 # Let there be PIE (via LMT)
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/app/LMT_v2.5_beta4.apk:system/priv-app/lmt/LMT_v2.5_beta4.apk \
-    vendor/cm/prebuilt/common/etc/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so
-
-# Let there be KII
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/app/kii.apk:system/priv-app/KII/kii.apk \
-    vendor/cm/prebuilt/common/etc/app/libjni_zl_jbkex_armv7a.so:system/lib/libjni_zl_jbkex_armv7a.so
+    vendor/cm/prebuilt/common/etc/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so \
+    vendor/cm/prebuilt/common/etc/app/LolliKbd.apk:system/priv-app/kbd/LolliKbd.apk \
+    vendor/cm/prebuilt/common/etc/app/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so
 
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
@@ -161,6 +158,7 @@ PRODUCT_PACKAGES += \
 
 # AudioFX
 PRODUCT_PACKAGES += \
+    AudioFX \
     Viper4Android
 
 # Custom CM packages
