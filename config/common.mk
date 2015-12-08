@@ -138,7 +138,8 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/app/LMT_v2.5_beta4.apk:system/priv-app/lmt/LMT_v2.5_beta4.apk \
     vendor/cm/prebuilt/common/etc/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so \
     vendor/cm/prebuilt/common/etc/app/LolliKbd.apk:system/priv-app/kbd/LolliKbd.apk \
-    vendor/cm/prebuilt/common/etc/app/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so
+    vendor/cm/prebuilt/common/etc/app/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so \
+    vendor/cm/prebuilt/common/etc/app/BackupSMS_v110.apk:system/priv-app/BackupSMS/BackupSMS_v110.apk
 
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
