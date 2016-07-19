@@ -133,7 +133,7 @@ include vendor/cm/config/cmsdk_common.mk
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/app/LMT_v2.6.apk:system/priv-app/LMT/LMT_v2.6.apk \
     vendor/cm/prebuilt/common/etc/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so \
-    vendor/cm/prebuilt/common/etc/app/ViPER4Android_FX.apk:system/priv-app/V4A/ViPER4Android_FX.apk \
+    vendor/cm/prebuilt/common/etc/app/ViPER4Android.apk:system/priv-app/V4A/ViPER4Android.apk \
     vendor/cm/prebuilt/common/etc/app/libV4AJniUtils.so:system/lib/libV4AJniUtils.so \
     vendor/cm/prebuilt/common/etc/app/Adaway.apk:system/priv-app/Adaway/Adaway.apk
 
