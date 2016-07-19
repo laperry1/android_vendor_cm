@@ -221,7 +221,7 @@ PRODUCT_PACKAGES += \
     su
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
+    persist.sys.root_access=3
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
@@ -238,6 +238,8 @@ ifndef CM_BUILDTYPE
         CM_BUILDTYPE := $(RELEASE_TYPE)
     endif
 endif
+
+CM_BUILDTYPE := samadhimod
 
 # Filter out random types, so it'll reset to UNOFFICIAL
 ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
@@ -288,8 +290,13 @@ ifeq ($(CM_BUILDTYPE), RELEASE)
         endif
     endif
 else
-    CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
-endif
+    ifeq ($(PRODUCT_VERSION_MINOR),0)
+        CM_BUILDTYPE := samadhimod
+        CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
+    else
+        CM_BUILDTYPE := samadhimod
+        CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
+    endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
