@@ -124,11 +124,16 @@ include vendor/cm/config/cmsdk_common.mk
 
 # Let there be PIE (via LMT)
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/app/LMT_v2.7.apk:system/priv-app/LMT/LMT_v2.7.apk \
-    vendor/cm/prebuilt/common/etc/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so \
-    vendor/cm/prebuilt/common/etc/app/ViPER4Android.apk:system/priv-app/V4A/ViPER4Android.apk \
-    vendor/cm/prebuilt/common/etc/app/libV4AJniUtils.so:system/lib/libV4AJniUtils.so \
-    vendor/cm/prebuilt/common/etc/app/Adaway.apk:system/priv-app/Adaway/Adaway.apk
+    vendor/cm/prebuilt/common/app/LMT/LMT_v2.7.apk:system/priv-app/LMT/LMT_v2.7.apk \
+    vendor/cm/prebuilt/common/app/LMT/libTouchServiceNative.so:system/lib/libTouchServiceNative.so \
+    vendor/cm/prebuilt/common/app/AdAway/AdAway.apk:system/priv-app/AdAway/AdAway.apk
+
+# Viper4Android
+PRODUCT_COPY_FILES += \
+   vendor/cm/prebuilt/common/bin/audio_policy.sh:system/audio_policy.sh \
+   vendor/cm/prebuilt/common/addon.d/95-LolliViPER.sh:system/addon.d/95-LolliViPER.sh \
+   vendor/cm/prebuilt/common/su.d/50viper.sh:system/su.d/50viper.sh \
+   vendor/cm/prebuilt/common/app/Viper4Android/ViPER4Android.apk:system/priv-app/Viper4Android/Viper4Android.apk 
 
 # Required CM packages
 PRODUCT_PACKAGES += \
