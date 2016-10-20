@@ -70,7 +70,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Helium.ogg
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
@@ -271,7 +270,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
 PRODUCT_VERSION_MAJOR = 13
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE := 3
+PRODUCT_VERSION_MAINTENANCE := 2
 
 ifeq ($(TARGET_VENDOR_SHOW_MAINTENANCE_VERSION),true)
     CM_VERSION_MAINTENANCE := $(PRODUCT_VERSION_MAINTENANCE)
