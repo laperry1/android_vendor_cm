@@ -131,9 +131,7 @@ PRODUCT_COPY_FILES += \
 
 # Viper4Android
 PRODUCT_COPY_FILES += \
-   vendor/cm/prebuilt/common/bin/audio_policy.sh:system/audio_policy.sh \
-   vendor/cm/prebuilt/common/addon.d/95-LolliViPER.sh:system/addon.d/95-LolliViPER.sh \
-   vendor/cm/prebuilt/common/su.d/50viper.sh:system/su.d/50viper.sh \
+   vendor/cm/prebuilt/common/etc/app/libV4AJniUtils.so:system/lib/libV4AJniUtils.so \
    vendor/cm/prebuilt/common/app/Viper4Android/ViPER4Android.apk:system/priv-app/Viper4Android/Viper4Android.apk 
 
 # Required CM packages
