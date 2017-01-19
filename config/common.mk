@@ -95,6 +95,10 @@ PRODUCT_COPY_FILES += \
    vendor/cm/prebuilt/common/etc/app/libV4AJniUtils.so:system/lib/libV4AJniUtils.so \
    vendor/cm/prebuilt/common/app/Viper4Android/ViPER4Android.apk:system/priv-app/Viper4Android/Viper4Android.apk 
 
+# Bootanimation
+PRODUCT_PACKAGES += \
+    bootanimation.zip
+
 # Required CM packages
 PRODUCT_PACKAGES += \
     CMAudioService \
@@ -210,7 +214,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # These packages are excluded from user builds
 PRODUCT_PACKAGES += \
     procmem \
-    procrank \
+    procrank
     su
 
 PRODUCT_PROPERTY_OVERRIDES += \
