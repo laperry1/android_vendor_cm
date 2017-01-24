@@ -214,7 +214,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # These packages are excluded from user builds
 PRODUCT_PACKAGES += \
     procmem \
-    procrank
+    procrank \
     su
 
 PRODUCT_PROPERTY_OVERRIDES += \
