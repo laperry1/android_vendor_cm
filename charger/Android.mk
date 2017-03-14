@@ -17,7 +17,7 @@ endif
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := healthd_board_cm.cpp
 LOCAL_MODULE := libhealthd.cm
-LOCAL_CFLAGS := -Werror
+LOCAL_CFLAGS := 
 LOCAL_C_INCLUDES := \
     system/core/healthd \
     bootable/recovery
