@@ -28,7 +28,7 @@ endif
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 endif
 
 # Backup Tool
@@ -117,7 +117,6 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     CMSettingsProvider \
     LineageSetupWizard \
     Eleven \
@@ -128,6 +127,10 @@ PRODUCT_PACKAGES += \
     Updater \
     WallpaperPicker \
     WeatherProvider
+
+# ViPER4Android
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/viper.zip:system/addon.d/viper.zip
 
 # Exchange support
 PRODUCT_PACKAGES += \
