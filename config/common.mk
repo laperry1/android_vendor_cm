@@ -14,7 +14,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+    ro.build.selinux=0
 
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -28,7 +28,7 @@ endif
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 # Backup Tool
@@ -280,7 +280,7 @@ ifdef CM_BUILDTYPE
     endif
 else
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := UNOFFICIAL
+    CM_BUILDTYPE := SAMADHIMOD
     CM_EXTRAVERSION :=
 endif
 
