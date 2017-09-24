@@ -146,7 +146,7 @@ PRODUCT_COPY_FILES += \
 
 #ADAWAY
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/app/Adaway.apk:system/priv-app/Adaway/Adaway.apk
+    vendor/cm/prebuilt/common/app/AdAway.apk:system/priv-app/AdAway/AdAway.apk
 
 
 # Exchange support
