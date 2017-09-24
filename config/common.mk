@@ -140,6 +140,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/magisk.zip:system/addon.d/magisk.zip
 
+#LMT
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/app/LMT_v2.8.apk:system/priv-app/LMT/LMT_v2.8.apk \
+    vendor/cm/prebuilt/common/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so \
+
+#ADAWAY
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/app/Adaway.apk:system/priv-app/Adaway/Adaway.apk
+
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
