@@ -142,7 +142,7 @@ PRODUCT_COPY_FILES += \
 #LMT
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/app/LMT_v2.8.apk:system/priv-app/LMT/LMT_v2.8.apk \
-    vendor/cm/prebuilt/common/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so
+ 	vendor/cm/prebuilt/common/app/libTouchServiceNative.so:system/lib/libTouchServiceNative.so
 
 #ADAWAY
 PRODUCT_COPY_FILES += \
