@@ -118,6 +118,7 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     CMSettingsProvider \
+    LineageSetupWizard \
     Eleven \
     ExactCalculator \
     Jelly \
